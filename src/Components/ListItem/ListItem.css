@@ -1,0 +1,12 @@
+.ListItem {
+    display: inline-block;
+    background-color: rgb(238, 181, 209);
+    margin: 20px;
+
+    
+}
+
+.ListItem jpg {
+    height: 256px;
+    width: 340px;
+}

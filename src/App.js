@@ -1,15 +1,13 @@
 import './App.css';
 
-import Button from "./Components/Button/Button";
-import Input from "./Components/Input/Input";
+import List from "./Containers/List/List";
 
-const App = () => {
+
+
+function App() {
   return (
     <div className="App">
-      <Button />
-      <Button />
-      <Button />
-      <Input />
+      <List />
     </div>
   );
 }
