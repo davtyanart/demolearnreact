@@ -5,7 +5,7 @@ import "./Button.css"
 
 
 function Button() {
-    return <button className="btn">AAA</button>
+    return <button className="btn">Watch online</button>
 }
 
 

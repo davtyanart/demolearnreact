@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button/Button";
 
 import "./ListItem.css";
 
@@ -13,7 +14,7 @@ function ListItem({ data }) {
                     <h3>{data.title}</h3>
                     <p>{data.description}</p>
                 </div>
-                <button>Watch online</button>
+                <Button />
             </div>
         </div>
     );
