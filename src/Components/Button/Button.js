@@ -1,12 +1,11 @@
 import React from "react";
-import "./Button.css"
+import "../Button/Button.css";
 
 
-
-
-function Button() {
-    return <button className="btn">Watch online</button>
+//chaildren
+function Button(props) {
+    return <button onClick={props.onClick} className="app-btn">{props.placeholder}</button>
 }
 
 
-export default Button;  
+export default Button; 

@@ -1,23 +1,16 @@
-import './App.css';
-import Button from "../src/Components/Button/Button";
-
-import List from "./Containers/List/List";
-
+import "./App.css";
+import React from "react";
+import Form from "./Containers/Form/Form";
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <List />
-      {/* <Button>
-        sadad asdasd dasd
-      </Button>
-      <Button />
-      <Button />
-      <Button />
-      <Button /> */}
+      <Form />
     </div>
   );
 }
+
+
 
 export default App;

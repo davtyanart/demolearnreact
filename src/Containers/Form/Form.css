@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(189, 184, 184);
+    
+}
+
+.form {
+    display: grid;
+    width: 200px;
+    height: auto;
+    
+}
+
+h1 {
+    color: white;
+}
+
+
+
+
+
+
+
