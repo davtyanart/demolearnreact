@@ -23,8 +23,8 @@ const Form = () => {
 
         <div className="form">
             <h1>Login</h1>
-            <Input value={firstName} placeholder={"Name"} onChange={firstNameOnChange} />
-            <Input value={password} placeholder={"Password"} onChange={passwordOnChange} type={"password"} />
+            <Input value={firstName} placeholder="Name" onChange={firstNameOnChange} />
+            <Input value={password} placeholder="Password" onChange={passwordOnChange} type="password" />
             <Button onClick={buttonOnClick} placeholder="Sign In" />
         </div>
 
