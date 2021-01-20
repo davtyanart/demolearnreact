@@ -1,37 +1,53 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Button from '../../Components/Button/Button';
 import Input from '../../Components/Input/Input';
-import "./Form.css";
+import './Form.css';
 
 const Form = () => {
-    const [firstName, setFirstName] = useState('');
-    const [password, setPassword] = useState('');
+    const [name, setName] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setErrorState] = useState(false)
 
-    const firstNameOnChange = (e) => {
-        setFirstName(e.target.value);
+    const onChangeName = (e) => {
+        const newVal = e.target.value
+        setName(newVal)
     }
 
-    const passwordOnChange = (e) => {
-        setPassword(e.target.value);
+    const onChangePassword = (e) => {
+        setPassword(e.target.value)
     }
 
-    const buttonOnClick = () => {
-        alert("The Button was clicked");
-    }
+    const onClick = () => {
+        if ((name.length && password.length) <= 6) {
+            setErrorState(true)
+        }
+        else {
+            setErrorState(false)
+        }
 
+    }
     return (
+        <div className="form" >
+            <h2>Login Form</h2>
+            <form>
+                <Input
+                    type="text"
+                    value={name}
+                    onChange={onChangeName}
+                    placeholder="Username"
+                />
 
-        <div className="form">
-            <h1>Login</h1>
-            <Input value={firstName} placeholder="Name" onChange={firstNameOnChange} />
-            <Input value={password} placeholder="Password" onChange={passwordOnChange} type="password" />
-            <Button onClick={buttonOnClick} placeholder="Sign In" />
+                <Input
+                    type="password"
+                    value={password}
+                    onChange={onChangePassword}
+                    placeholder="Password"
+                />
+                <p className="text-danger">{error ? 'The field name password is required' : ''}</p>
+
+                <Button onClick={onClick} text='Signin' />
+            </form>
         </div>
-
     )
-
 }
-
-
 export default Form;
-

@@ -1,8 +1,20 @@
-import React from "react";
-import "../Input/Input.css";
+import React from 'react';
+import './Input.css';
 
-function Input(props) {
-    return <input value={props.value} onChange={props.onChange} placeholder={props.placeholder} type={props.type} />
+const Input = (props) => {
+
+    const { type, value, onChange, placeholder } = props;
+    return (
+        <div className="form-group">
+            <input
+                type={type}
+                className="form-control"
+                value={value}
+                onChange={onChange}
+                placeholder={placeholder}
+            />
+        </div>
+    )
 }
 
 export default Input;

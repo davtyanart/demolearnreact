@@ -1,11 +1,13 @@
-import React from "react";
-import "../Button/Button.css";
+import React from 'react';
+import './Button.css';
 
-
-//chaildren
-function Button(props) {
-    return <button onClick={props.onClick} className="app-btn">{props.placeholder}</button>
+const Button = (props) => {
+    return (
+        <button
+            type="submit"
+            className="btn form-control "
+            onClick={props.onClick}
+        >{props.text}</button>
+    )
 }
-
-
-export default Button; 
+export default Button;
